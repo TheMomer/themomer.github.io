@@ -1,13 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>My BIO</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-bg: #212529;
+            --secondary-bg: #2b3035;
+            --primary-text: #f8f9fa;
+        }
+        
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .bg-light {
+            background-color: var(--secondary-bg) !important;
+        }
+        .bg-dark {
+            background-color: var(--primary-bg) !important;
+        }
+        
+        .card {
+            background-color: var(--secondary-bg);
+            border-color: rgba(255, 255, 255, 0.125);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        
+        .hero {
+            background-color: var(--secondary-bg);
+            padding: 120px 0;
+        }
+        
+        .project-card {
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>site for something</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">TheMomer Bio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Hello, i am TheMomer</h1>
+            <p class="lead mb-4">Designer | Programmer | Linux enthusiast</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center mb-5">About me</h2>
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h5>My name is Maxim. I am located in Russia, i also like Arch Linux :3</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">My skills</h2>
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-code-square"></i> Development</h5>
+                            <p class="card-text">Python, Go, Bash, JSON, TOML</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 align-items-center justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-palette"></i> Design</h5>
+                            <p class="card-text">Lunacy, UI/UX/Normal Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5">My works</h2>
+            <div class="row g-4 align-items-center justify-content-center text-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <img src="yofetch.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Yofetch</h5>
+                            <p class="card-text">Yofetch is a fetch for Linux, Windows, FreeBSD and macOS. This application uses Lua for the config.</p>
+                            <p class="card-text">In this fetch you have to make modules, logos and so on yourself.</p>
+                            <!-- <a href="#" class="btn btn-outline-primary"></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <img src="cherrys.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Cherrys</h5>
+                            <p class="card-text">Cherrys is a package manager for Linux. It uses the TOML config. In development.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <img src="velorum.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Velorum</h5>
+                            <p class="card-text">Velorum is a shell that uses Lua scripts and plugins. In development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="https://github.com/TheMomer" class="text-white me-3"><i class="bi bi-github"></i></a>
+                <a href="https://t.me/kde_konqi358" class="text-white"><i class="bi bi-telegram"></i></a>
+            </div>
+            <p class="mb-0">© 2025 TheMomer. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
